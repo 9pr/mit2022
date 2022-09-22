@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Углы поворота</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,7 +16,178 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Углы поворота
+						=============
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Гироскоп
+						--------
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Определение
+
+						Гироскоп (от др.греч. $\gamma \upsilon \rho o \varsigma$ круг и &sigma;&kappa;o&pi;&epsilon;&omega; смотрю) - устройство, способное реагировать на изменение углов ориентации тела, на котором оно установлено, относительно инерциальной системы отсчета.
+						
+						Пример - детская игрушка волчок (юла).				
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Определение
+
+						Степенью свободы гироскопа называют количество осей его вращения.
+						
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Определение
+
+						Угол вращения гироскопа относительно вертикальной Z - называется углом собственного вращения. Угол собственного вращения $2 \pi$ планета Земля достигает за 24 часа.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Определение
+
+						Угол описывающий траекторию вращения называется углом прецессии. Угол прецессии $2 \pi$ планета Земля достигает за 25776 лет.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Определение
+
+						Угол колебания гироскопа относительно оси Z называется углом нутации.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Гироскоп
+						![Гироскоп](img/vrashchatelnoye-dvizheniye-tela-printsip-giroskopa-tsentrobezhnaya-i-tsentrostremitelnaya-sila.jpg)
+					</script>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+						Углы поворота транспортных средств
+						----------------------------------
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Крен
+						
+						Угловые движения вокруг продольной оси, который задает ориентацию аппарата, относительно нормальной системы координат, соответствует углу собственного вращения гироскопа и обозначается буквой $\gamma$. Во всех видах транспорта, кроме ракеты называется креном.
+					</script>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+						### Крен
+						
+						Угол поворота ракеты вокруг продольной оси называется углом вращения и обозначается буквой $\phi$. На самолёте вызывается работой элеронов - элементов механизации крыла. Поворот судна вокруг продольной оси на $180^\circ$ называется оверкиль или в народе "верх дном". В международной системе называется roll.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Рысканье
+						
+						Угловые движения летательного аппарата, судна, автомобиля относительно вертикальной оси, а так же небольшие изменения курса вправо или влево, свойственные судну называется рысканье. На самолете управляется с помощью руля направления. На судне с помощью разнонаправленных движений винтов. 
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Рысканье
+					
+						Соответствует углу прецессии в гироскопе. Обозначается буквой $\psi$. В динамике полёта угол рысканья также означает угол поворота самолёта в горизонтальной плоскости, отчитываемый от направления на север. В международной системе называется yaw.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Тангаж
+					
+						Угловое движение летательного аппарата или судна относительно главной горизонтальной поперечной оси называется углом тангажа на летательном аппарате и углом дифферента на суде. То есть угол между продольной осью летательного аппарата или судна и горизонтом. Обозначается буквой $\theta$. 
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Тангаж
+					
+						Соответствует углу нутации гироскопа. В авиации различают:
+						- положительный тангаж (подъем носа) - кабрирование
+						- отрицательный тангаж (опускание носа) - пикирование
+						
+						В международной системе называется pitch.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Roll-yaw-pitch
+						![roll-yaw-pitch](img/roll_pitch_yaw.jfif)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Подъемная сила
+						--------------
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Угол атаки
+
+						Угол атаки (обозначается, как угол $\alpha$) - угол между направлением вектора скорости набегающего на тело потока (жидкости или газа) и характерным продольным направлением, выбранным на теле. 
+						Например, у самолёта - это хорда крыла.
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Угол атаки
+
+						![Угол атаки](img/atack.png)
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Угол атаки
+
+						![Угол атаки](img/atack.png)
+
+					</script>
+				</section>
+
+
+
 				<section>Slide 2</section>
 			</div>
 		</div>
@@ -25,6 +196,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +205,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
 			});
 		</script>
 	</body>

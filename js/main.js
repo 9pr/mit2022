@@ -15,7 +15,7 @@ function init() {
     }
   );
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  document.querySelector('#plane').appendChild(renderer.domElement);
   camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 10000);
   camera.position.set(-5,7,-5);
   camera.lookAt(0,0,0);
@@ -71,10 +71,9 @@ function rotatePlane(body) {
   plane.rotation.z = THREE.MathUtils.degToRad(body.gamma);
 }
 
-if ('DeviceOrientationEvent' in window) {
-  window.addEventListener('deviceorientation', rotatePlane, false);
-} else {
-  console.log('Данная технология не поддерживается');
-}
+socket = io('https://plane.9pr.ru/'+user);
+socket.on('connect', () => {
+  socket.on('getPosition', rotatePlane);
+});
 
 init();

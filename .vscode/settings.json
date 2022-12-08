@@ -2,5 +2,6 @@
     "cSpell.enableFiletypes": [
         "!markdown"
     ],
-    "cSpell.language": "en,ru,ru-RU"
+    "cSpell.language": "en,ru,ru-RU",
+    "liveServer.settings.port": 5501
 }

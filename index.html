@@ -12,6 +12,7 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 		<style>
 			.reveal h1 {
@@ -24,10 +25,13 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section data-markdown>
+				<section data-markdown data-separator-notes="^Note:">
 					<script type="text/template">
 						Углы поворота
 						=============
+
+						Note: 
+						Заглавный слайд
 					</script>
 				</section>
 
@@ -234,18 +238,14 @@
 					</section>
 				</section>
 
-				<section>
-					<h3>Манипулятор самолёта</h3>
-				</section>
-
-				<section>
-					<h3>Морской бой</h3>
-				</section>
-
 				<section data-background-image="img/mem1.jpg"
 				data-background-size="contain" 
 				data-menu-title="Мем про самолёт и поезд"
-				></section>
+				>
+				<aside class="notes">
+					Мем про самолёт и поезд
+				</aside>
+				</section>
 
 				<section data-background-image="img/mem2.jpg"
 				data-background-size="contain"
@@ -260,6 +260,12 @@
 				</section>
 
 			</div>
+			<div id="plane"></div>
+			<div style="position: fixed; z-index: 30; font-size: 22px; left: 60px; bottom: 32px;">
+				<a href="#" id="noteswitch" title="Включение/отключение заметок к слайду">
+					<i class="fa fa-sticky-note"></i>
+				</a>
+			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
@@ -268,7 +274,26 @@
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/math/math.js"></script>
 		<script src="plugin/zoom/zoom.js"></script>
+		
+		<script src="js/three.js"></script>
+		<script src="js/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="js/examples/js/controls/OrbitControls.js"></script>
+		<script src="js/examples/js/objects/Sky.js"></script>
+		<script src="https://plane.9pr.ru/socket.io/socket.io.js"></script>
+		<script src="js/main.js"></script>
+		
 		<script>
+			window.onload = () => {
+				let showNodes = () => {
+					Reveal.configure({
+						showNotes: (
+							Reveal.getConfig().showNotes ? false : true	
+						)
+					});
+					return false;
+				}
+				document.querySelector('#noteswitch').onclick = showNodes;
+			}
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
